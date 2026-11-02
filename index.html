@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Spa Biru | Spa Muslimah Klang</title>
+    <meta name="description" content="Nikmati pengalaman spa muslimah eksklusif di Klang, Selangor. Rawatan relaksasi, facial care dan body treatment berkualiti tinggi dalam suasana tenang dan selesa.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Rumah Spa Biru | Spa Muslimah Klang">
+    <meta property="og:description" content="Manjakan diri anda dengan rawatan spa pilihan di Rumah Spa Biru, Klang. Suasana eksklusif khusus untuk wanita dan muslimah.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.namadomainanda.com/images/logo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://www.namadomainanda.com">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        spa: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            champagne: '#d4af37',
+                            lightbg: '#f8fafc',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Custom Styles & Animations */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(12, 74, 110, 0.65), rgba(7, 89, 133, 0.75)), url('latar.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 30px -5px rgba(14, 165, 233, 0.15);
+        }
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.25);
+        }
+        /* Hide scrollbar for chrome, safari and opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        .modal-backdrop {
+            background: rgba(12, 74, 110, 0.6);
+            backdrop-filter: blur(5px);
+        }
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-spa-lightbg text-slate-700 font-sans antialiased selection:bg-spa-200 selection:text-spa-900">
+
+    <!-- WhatsApp Number Configuration Variable (JS accessible) -->
+    <script>
+        const SPA_WHATSAPP_NUMBER = "60123456789"; // Tukar nombor WhatsApp spa di sini
+    </script>
+
+    <!-- STICKY NAVIGATION HEADER -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-40 glass-nav border-b border-sky-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-full bg-spa-600 flex items-center justify-center text-white shadow-md group-hover:bg-spa-700 transition">
+                        <i class="fa-solid fa-spa text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-xl sm:text-2xl font-bold text-slate-800 tracking-wide block leading-tight">Rumah Spa Biru</span>
+                        <span class="text-xs text-spa-600 font-medium tracking-widest uppercase">Spa Muslimah Klang</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#tentang" class="text-sm font-medium text-slate-600 hover:text-spa-600 transition">Tentang Kami</a>
+                    <a href="#pakej" class="text-sm font-medium text-slate-600 hover:text-spa-600 transition">Pakej Spa</a>
+                    <a href="#kelebihan" class="text-sm font-medium text-slate-600 hover:text-spa-600 transition">Kelebihan</a>
+                    <a href="#galeri" class="text-sm font-medium text-slate-600 hover:text-spa-600 transition">Galeri</a>
+                    <a href="#testimoni" class="text-sm font-medium text-slate-600 hover:text-spa-600 transition">Testimoni</a>
+                    <a href="#faq" class="text-sm font-medium text-slate-600 hover:text-spa-600 transition">FAQ</a>
+                    <a href="#lokasi" class="text-sm font-medium text-slate-600 hover:text-spa-600 transition">Lokasi</a>
+                </nav>
+
+                <!-- Desktop CTA -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#pakej" class="bg-spa-600 hover:bg-spa-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition flex items-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Tempah Slot</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-700 hover:text-spa-600 focus:outline-none p-2 rounded-lg">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 right-0 bg-white border-b border-sky-100 shadow-xl px-6 py-6 transition-all">
+            <div class="flex flex-col space-y-4">
+                <a href="#tentang" class="mobile-link text-slate-700 font-medium py-2 border-b border-slate-100">Tentang Kami</a>
+                <a href="#pakej" class="mobile-link text-slate-700 font-medium py-2 border-b border-slate-100">Pakej Spa</a>
+                <a href="#kelebihan" class="mobile-link text-slate-700 font-medium py-2 border-b border-slate-100">Kelebihan</a>
+                <a href="#galeri" class="mobile-link text-slate-700 font-medium py-2 border-b border-slate-100">Galeri</a>
+                <a href="#testimoni" class="mobile-link text-slate-700 font-medium py-2 border-b border-slate-100">Testimoni</a>
+                <a href="#faq" class="mobile-link text-slate-700 font-medium py-2 border-b border-slate-100">FAQ</a>
+                <a href="#lokasi" class="mobile-link text-slate-700 font-medium py-2 border-b border-slate-100">Lokasi & Hubungi</a>
+                <a href="#pakej" class="mobile-link bg-spa-600 text-white text-center py-3 rounded-xl font-semibold shadow-md mt-2">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Tempah Sekarang
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-bg min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 text-white relative">
+        <div class="max-w-4xl mx-auto text-center z-10 space-y-6">
+            <!-- Badge -->
+            <div class="inline-flex items-center space-x-2 bg-white/15 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-sky-100 text-xs sm:text-sm font-medium tracking-wide">
+                <i class="fa-solid fa-shield-heart text-spa-300"></i>
+                <span>Spa Muslimah Eksklusif & Khusus Wanita di Klang</span>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight sm:leading-tight">
+                Luangkan Masa Untuk Diri Anda. <br class="hidden sm:inline">Nikmati Pengalaman Spa Yang Menenangkan.
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-base sm:text-lg lg:text-xl text-sky-100 font-light max-w-2xl mx-auto leading-relaxed">
+                Manjakan diri dengan rawatan spa pilihan di Rumah Spa Biru, sebuah spa muslimah di Klang yang menyediakan pengalaman penjagaan diri dalam suasana selesa dan menenangkan.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="#pakej" class="w-full sm:w-auto bg-white text-spa-800 hover:bg-sky-50 font-semibold px-8 py-4 rounded-full shadow-lg transition duration-300 text-center flex items-center justify-center space-x-2">
+                    <span>LIHAT PAKEJ SPA</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+                <a href="#pakej" class="w-full sm:w-auto bg-spa-600 hover:bg-spa-500 text-white font-semibold px-8 py-4 rounded-full shadow-lg transition duration-300 text-center flex items-center justify-center space-x-2 border border-spa-400">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>TEMPAH SLOT SEKARANG</span>
+                </a>
+            </div>
+
+            <!-- Trust Highlights Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pt-10 border-t border-white/15 max-w-3xl mx-auto text-left sm:text-center">
+                <div class="flex items-center space-x-3 bg-white/10 backdrop-blur-sm p-3 rounded-xl border border-white/10">
+                    <div class="w-10 h-10 rounded-full bg-sky-400/20 flex items-center justify-center text-spa-200 shrink-0">
+                        <i class="fa-solid fa-lock text-sm"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-semibold text-white">Privasi 100% Terjaga</h4>
+                        <p class="text-[11px] text-sky-200">Khusus untuk wanita & muslimah</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3 bg-white/10 backdrop-blur-sm p-3 rounded-xl border border-white/10">
+                    <div class="w-10 h-10 rounded-full bg-sky-400/20 flex items-center justify-center text-spa-200 shrink-0">
+                        <i class="fa-solid fa-hands-bubbles text-sm"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-semibold text-white">Therapist Berpengalaman</h4>
+                        <p class="text-[11px] text-sky-200">Teknik urutan profesional</p>
+                    </div>
+                </div>
+                <div class="col-span-2 md:col-span-1 flex items-center space-x-3 bg-white/10 backdrop-blur-sm p-3 rounded-xl border border-white/10">
+                    <div class="w-10 h-10 rounded-full bg-sky-400/20 flex items-center justify-center text-spa-200 shrink-0">
+                        <i class="fa-solid fa-calendar-check text-sm"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-semibold text-white">Tempahan Mudah</h4>
+                        <p class="text-[11px] text-sky-200">Terus melalui WhatsApp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce hidden sm:flex">
+            <span class="text-xs text-sky-200 mb-1 font-medium tracking-wider">Scroll Ke Bawah</span>
+            <i class="fa-solid fa-chevron-down text-sky-200 text-sm"></i>
+        </div>
+    </section>
+
+    <!-- TRUST & VALUE PROPOSITION -->
+    <section class="py-16 bg-white border-b border-sky-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Item 1 -->
+                <div class="p-6 rounded-2xl bg-spa-50 border border-sky-100 flex items-start space-x-4 transition hover:shadow-md">
+                    <div class="w-12 h-12 rounded-xl bg-spa-600 text-white flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-solid fa-spa text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-slate-800 text-base mb-1">Suasana Selesa</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Persekitaran bilik rawatan yang bersih, wangi dan menenangkan jiwa.</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="p-6 rounded-2xl bg-spa-50 border border-sky-100 flex items-start space-x-4 transition hover:shadow-md">
+                    <div class="w-12 h-12 rounded-xl bg-spa-600 text-white flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-solid fa-list-check text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-slate-800 text-base mb-1">Pilihan Pakej Lengkap</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Pelbagai pakej penjagaan diri dari relaksasi hingga rawatan wajah.</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="p-6 rounded-2xl bg-spa-50 border border-sky-100 flex items-start space-x-4 transition hover:shadow-md">
+                    <div class="w-12 h-12 rounded-xl bg-spa-600 text-white flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-slate-800 text-base mb-1">Tempahan Pantas</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Urusan tempahan slot masa anda dengan mudah menerusi WhatsApp.</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="p-6 rounded-2xl bg-spa-50 border border-sky-100 flex items-start space-x-4 transition hover:shadow-md">
+                    <div class="w-12 h-12 rounded-xl bg-spa-600 text-white flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-solid fa-face-smile-beam text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-slate-800 text-base mb-1">Mesra Pelanggan</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Servis mesra, prihatin dan mengutamakan kepuasan setiap pelanggan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: TENTANG KAMI -->
+    <section id="tentang" class="py-20 bg-spa-lightbg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=800&auto=format&fit=crop" alt="Suasana Spa" class="w-full h-[400px] object-cover" onerror="this.src='https://placehold.co/800x600/e0f2fe/0284c7?text=Rumah+Spa+Biru'">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-sky-100 hidden sm:block max-w-xs">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <div class="w-10 h-10 rounded-full bg-sky-100 text-spa-600 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Privasi Mutlak</h4>
+                                <p class="text-xs text-slate-500">100% Wanita Sahaja</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-600">Tempat berehat eksklusif untuk melepaskan penat lelah harian anda.</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center space-x-2 text-spa-600 font-semibold text-sm tracking-wider uppercase bg-sky-100 px-3 py-1 rounded-full">
+                        <span>Tentang Rumah Spa Biru</span>
+                    </div>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
+                        Destinasi Ketenangan & Penjagaan Diri Wanita di Klang
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Rumah Spa Biru ditubuhkan khusus untuk memberikan ruang relaksasi yang selesa dan memelihara privasi kaum wanita serta muslimah di sekitar Klang. Kami memahami kesibukan rutin harian anda, sama kerjaya mahupun keluarga.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Dengan menggabungkan teknik urutan tradisional dan moden berserta produk penjagaan kulit yang berkualiti, setiap sesi rawatan direka khusus untuk memulihkan tenaga fizikal, menyegarkan minda, serta menyerikan kembali penampilan anda.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-spa-600 text-lg"></i>
+                            <span class="text-slate-700 font-medium text-sm">Terapis Profesional</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-spa-600 text-lg"></i>
+                            <span class="text-slate-700 font-medium text-sm">Produk Halal & Suci</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-spa-600 text-lg"></i>
+                            <span class="text-slate-700 font-medium text-sm">Suasana Tenang</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-spa-600 text-lg"></i>
+                            <span class="text-slate-700 font-medium text-sm">Harga Berpatutan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: PAKEJ SPA -->
+    <section id="pakej" class="py-20 bg-white border-t border-sky-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-spa-600 font-semibold text-sm tracking-wider uppercase bg-sky-100 px-3 py-1 rounded-full">Senarai Pakej Eksklusif</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Pilih Pakej Rawatan Spa Anda</h2>
+                <p class="text-slate-600 text-base">Pilih pakej mengikut keperluan relaksasi dan kecantikan anda. Setiap rawatan dikendalikan dengan penuh teliti.</p>
+            </div>
+
+            <!-- Package Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Pakej 1 -->
+                <div class="package-card bg-white rounded-3xl border border-sky-100 overflow-hidden shadow-md transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=600&auto=format&fit=crop" alt="Relaxing Spa" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/e0f2fe/0284c7?text=Relaxing+Spa'">
+                            <span class="absolute top-4 right-4 bg-spa-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">Terlaris</span>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <h3 class="font-serif text-xl font-bold text-slate-900">Pakej Relaxing Spa</h3>
+                            <p class="text-sm text-slate-600">Sesuai untuk melegakan ketegangan otot dan merehatkan minda setelah penat bekerja.</p>
+                            <div class="border-t border-sky-50 pt-3 space-y-2">
+                                <div class="flex items-center text-xs text-slate-600 space-x-2">
+                                    <i class="fa-solid fa-check text-spa-600"></i>
+                                    <span>Urutan Aromaterapi Seluruh Badan</span>
+                                </div>
+                                <div class="flex items-center text-xs text-slate-600 space-x-2">
+                                    <i class="fa-solid fa-check text-spa-600"></i>
+                                    <span>Foot Bath & Scrub</span>
+                                </div>
+                                <div class="flex items-center text-xs text-slate-600 space-x-2">
+                                    <i class="fa-solid fa-check text-spa-600"></i>
+                                    <span>Teh Herba Menenangkan</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between text-xs text-slate-500 pt-2">
+                                <span class="flex items-center"><i class="fa-regular fa-clock mr-1"></i> 2 Jam</span>
+                                <span class="font-bold text-spa-700 text-lg">RM 130 <span class="text-xs font-normal text-slate-500">(Demo)</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openBookingModal('Pakej Relaxing Spa', '130')" class="w-full bg-spa-600 hover:bg-spa-700 text-white font-semibold py-3 rounded-xl shadow transition text-sm flex items-center justify-center space-x-2">
+                            <span>PILIH PAKEJ INI</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pakej 2 -->
+                <div class="package-card bg-white rounded-3xl border border-sky-100 overflow-hidden shadow-md transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="image.jpg" alt="Body Treatment" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/e0f2fe/0284c7?text=Body+Treatment'">
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <h3 class="font-serif text-xl font-bold text-slate-900">Pakej Body Treatment</h3>
+                            <p class="text-sm text-slate-600">Rawatan eksfoliasi menyeluruh untuk membuang sel kulit mati dan menyuburkan kulit.</p>
+                            <div class="border-t border-sky-50 pt-3 space-y-2">
+                                <div class="flex items-center text-xs text-slate-600 space-x-2">
+                                    <i class="fa-solid fa-check text-spa-600"></i>
+                                    <span>Body Scrub Premium</span>
+                                </div>
+                                <div class="flex items-center text-xs text-slate-600 space-x-2">
+                                    <i class="fa-solid fa-check text-spa-600"></i>
+                                    <span>Mandian Susu / Herba</span>
+                                </div>
+                                <div class="flex items-center text-xs text-slate-600 space-x-2">
+                                    <i class="fa-solid fa-check text-spa-600"></i>
+                                    <span>Losyen Badan Eksklusif</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between text-xs text-slate-500 pt-2">
+                                <span class="flex items-center"><i class="fa-regular fa-clock mr-1"></i> 2.5 Jam</span>
+                                <span class="font-bold text-spa-700 text-lg">RM 160 <span class="text-xs font-normal text-slate-500">(Demo)</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openBookingModal('Pakej Body Treatment', '160')" class="w-full bg-spa-600 hover:bg-spa-700 text-white font-semibold py-3 rounded-xl shadow transition text-sm flex items-center justify-center space-x-2">
+                            <span>PILIH PAKEJ INI</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pakej 3 -->
+                <div class="package-card bg-white rounded-3xl border border-sky-100 overflow-hidden shadow-md transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600&auto=format&fit=crop" alt="Facial Care" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/e0f2fe/0284c7?text=Facial+Care'">
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <h3 class="font-serif text-xl font-bold text-slate-900">Pakej Facial Care</h3>
+                            <p class="text-sm text-slate-600">Rawatan wajah khusus untuk menyerikan semula seri wajah serta menyegarkan kulit kusam.</p>
+                            <div class="border-t border-sky-50 pt-3 space-y-2">
+                                <div class="flex items-center text-xs text-slate-600 space-x-2">
+                                    <i class="fa-solid fa-check text-spa-600"></i>
+                                    <span>Deep Cleansing & Steam</span>
+                                </div>
+                                <div class="flex items-center text-xs text-slate-600 space-x-2">
+                                    <i class="fa-solid fa-check text-spa-600"></i>
+                                    <span>Face Massage & Masker</span>
+                                </div>
+                                <div class="flex items-center text-xs text-slate-600 space-x-2">
+                                    <i class="fa-solid fa-check text-spa-600"></i>
+                                    <span>Serum Penghidratan</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between text-xs text-slate-500 pt-2">
+                                <span class="flex items-center"><i class="fa-regular fa-clock mr-1"></i> 1.5 Jam</span>
+                                <span class="font-bold text-spa-700 text-lg">RM 95 <span class="text-xs font-normal text-slate-500">(Demo)</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openBookingModal('Pakej Facial Care', '95')" class="w-full bg-spa-600 hover:bg-spa-700 text-white font-semibold py-3 rounded-xl shadow transition text-sm flex items-center justify-center space-x-2">
+                            <span>PILIH PAKEJ INI</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pakej 4 -->
+                <div class="package-card bg-white rounded-3xl border border-sky-100 overflow-hidden shadow-md transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=600&auto=format&fit=crop" alt="Full Body Pampering" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/e0f2fe/0284c7?text=Full+Body+Pampering'">
+                            <span class="absolute top-4 right-4 bg-spa-champagne text-white text-xs font-semibold px-3 py-1 rounded-full shadow">VIP</span>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <h3 class="font-serif text-xl font-bold text-slate-900">Pakej Full Body Pampering</h3>
+                            <p class="text-sm text-slate-600">Pakej mewah menyeluruh dari hujung rambut hingga hujung kaki untuk kepuasan maksimum.</p>
+                            <div class="border-t border-sky-50 pt-3 space-y-2">
+                                <div class="flex items-center text-xs text-slate-600 space-x-2">
+                                    <i class="fa-solid fa-check text-spa-600"></i>
+                                    <span>Full Body Massage & Scrub</span>
+                                </div>
+                                <div class="flex items-center text-xs text-slate-600 space-x-2">
+                                    <i class="fa-solid fa-check text-spa-600"></i>
+                                    <span>Organic Facial Treatment</span>
+                                </div>
+                                <div class="flex items-center text-xs text-slate-600 space-x-2">
+                                    <i class="fa-solid fa-check text-spa-600"></i>
+                                    <span>Hair Spa / Scalp Treatment</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between text-xs text-slate-500 pt-2">
+                                <span class="flex items-center"><i class="fa-regular fa-clock mr-1"></i> 3.5 Jam</span>
+                                <span class="font-bold text-spa-700 text-lg">RM 250 <span class="text-xs font-normal text-slate-500">(Demo)</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openBookingModal('Pakej Full Body Pampering', '250')" class="w-full bg-spa-600 hover:bg-spa-700 text-white font-semibold py-3 rounded-xl shadow transition text-sm flex items-center justify-center space-x-2">
+                            <span>PILIH PAKEJ INI</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: MENGAPA PILIH KAMI -->
+    <section id="kelebihan" class="py-20 bg-sky-50/50 border-t border-sky-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-spa-600 font-semibold text-sm tracking-wider uppercase bg-sky-100 px-3 py-1 rounded-full">Kelebihan Kami</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Kenapa Ramai Memilih Rumah Spa Biru?</h2>
+                <p class="text-slate-600 text-base">Kami komited memberikan pengalaman terbaik yang membuatkan anda selesa dan ingin kembali lagi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl border border-sky-100 shadow-sm space-y-4">
+                    <div class="w-14 h-14 rounded-2xl bg-spa-600 text-white flex items-center justify-center text-2xl shadow-md">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900">Suasana Privasi & Tenang</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Khusus untuk wanita dan muslimah. Anda dapat menikmati sesi rawatan tanpa risau gangguan luar, memberikan ketenangan minda yang sepenuhnya.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-sky-100 shadow-sm space-y-4">
+                    <div class="w-14 h-14 rounded-2xl bg-spa-600 text-white flex items-center justify-center text-2xl shadow-md">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900">Pakej Mengikut Keperluan</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Pelbagai pilihan pakej fleksibel sama ada untuk penjagaan wajah, urutan badan, mahupun rawatan menyeluruh mengikut bajet anda.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-sky-100 shadow-sm space-y-4">
+                    <div class="w-14 h-14 rounded-2xl bg-spa-600 text-white flex items-center justify-center text-2xl shadow-md">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900">Lokasi Strategik di Klang</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Terletak di kawasan yang mudah diakses di sekitar Klang, Selangor, lengkap dengan kemudahan parkir yang selesa untuk pengunjung.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: GALERI SPA -->
+    <section id="galeri" class="py-20 bg-white border-t border-sky-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-spa-600 font-semibold text-sm tracking-wider uppercase bg-sky-100 px-3 py-1 rounded-full">Galeri Visual</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Suasana & Suasana Dalaman Spa</h2>
+                <p class="text-slate-600 text-base">Lihat suasana bersih, moden dan menenangkan di Rumah Spa Biru.</p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-2xl shadow-md group cursor-pointer relative h-64" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop" alt="Ruang Rawatan Spa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/800x600/e0f2fe/0284c7?text=Ruang+Rawatan'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white text-sm font-semibold">Ruang Rawatan Eksklusif</span>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-md group cursor-pointer relative h-64" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=800&auto=format&fit=crop" alt="Bilik Relaksasi" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/800x600/e0f2fe/0284c7?text=Bilik+Relaksasi'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white text-sm font-semibold">Bilik Relaksasi Tenang</span>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-md group cursor-pointer relative h-64" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop" alt="Produk & Rawatan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/800x600/e0f2fe/0284c7?text=Rawatan+Wajah'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white text-sm font-semibold">Rawatan Penjagaan Wajah</span>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-md group cursor-pointer relative h-64" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop" alt="Urutan Aromaterapi" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/800x600/e0f2fe/0284c7?text=Urutan+Aromaterapi'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white text-sm font-semibold">Suasana Bilik Urutan</span>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-md group cursor-pointer relative h-64" onclick="openLightbox(this)">
+                    <img src="biru.gif" alt="Dekorasi Lembut" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/800x600/e0f2fe/0284c7?text=Dekorasi+Spa'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white text-sm font-semibold">Dekorasi Elegan & Biru Lembut</span>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-md group cursor-pointer relative h-64" onclick="openLightbox(this)">
+                    <img src="images.jpg" alt="Herba & Teh" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/800x600/e0f2fe/0284c7?text=Teh+Herba+Spa'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white text-sm font-semibold">Sudut Jamuan Herba</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: TESTIMONI -->
+    <section id="testimoni" class="py-20 bg-sky-50/50 border-t border-sky-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-spa-600 font-semibold text-sm tracking-wider uppercase bg-sky-100 px-3 py-1 rounded-full">Testimoni Pelanggan</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Apa Kata Pelanggan Kami?</h2>
+                <p class="text-slate-600 text-base">Ulasan contoh daripada pelanggan yang telah mendapatkan pengalaman relaksasi bersama kami.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimoni 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-sky-100 shadow-sm flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-400 text-sm space-x-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm italic leading-relaxed">
+                            "Suasana spa sangat tenang dan selesa. Sangat berpuas hati dengan servis urutan. Terasa hilang segala penat bekerja. Recommended untuk wanita di Klang!"
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-4 border-t border-sky-50">
+                        <div class="w-12 h-12 rounded-full bg-sky-100 text-spa-700 font-bold flex items-center justify-center">
+                            NF
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">Puan Nurul Fadhilah</h4>
+                            <p class="text-xs text-slate-500">Pelanggan Pakej Relaxing Spa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-sky-100 shadow-sm flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-400 text-sm space-x-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm italic leading-relaxed">
+                            "Sangat selesa sebab khusus untuk wanita sahaja. Terapis pandai, mesra dan sangat berhemah. Proses tempahan melalui WhatsApp pun sangat pantas."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-4 border-t border-sky-50">
+                        <div class="w-12 h-12 rounded-full bg-sky-100 text-spa-700 font-bold flex items-center justify-center">
+                            SA
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">Siti Aisyah</h4>
+                            <p class="text-xs text-slate-500">Pelanggan Pakej Facial Care</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-sky-100 shadow-sm flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-400 text-sm space-x-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm italic leading-relaxed">
+                            "Pakej Full Body Pampering memang terbaik! Kulit jadi halus dan badan terasa ringan. Pasti akan datang lagi untuk sesi seterusnya bulan depan."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-4 border-t border-sky-50">
+                        <div class="w-12 h-12 rounded-full bg-sky-100 text-spa-700 font-bold flex items-center justify-center">
+                            ZM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">Zulaikha Mansor</h4>
+                            <p class="text-xs text-slate-500">Pelanggan Pakej VIP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: FAQ -->
+    <section id="faq" class="py-20 bg-white border-t border-sky-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-spa-600 font-semibold text-sm tracking-wider uppercase bg-sky-100 px-3 py-1 rounded-full">Soalan Lazim</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Soalan Lazim (FAQ)</h2>
+                <p class="text-slate-600 text-base">Dapatkan jawapan kepada persoalan lazim mengenai perkhidmatan di Rumah Spa Biru.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="border border-sky-100 rounded-2xl overflow-hidden bg-white shadow-sm">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-semibold text-slate-800 hover:text-spa-600 transition">
+                        <span>Di manakah lokasi Rumah Spa Biru?</span>
+                        <i class="fa-solid fa-chevron-down text-spa-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-sky-50 pt-4">
+                        Lokasi kami terletak di kawasan strategik di Klang, Selangor. Alamat penuh akan diberikan kepada anda melalui WhatsApp sebaik sahaja anda membuat pengesahan tempahan slot.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-sky-100 rounded-2xl overflow-hidden bg-white shadow-sm">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-semibold text-slate-800 hover:text-spa-600 transition">
+                        <span>Bagaimana cara membuat tempahan?</span>
+                        <i class="fa-solid fa-chevron-down text-spa-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-sky-50 pt-4">
+                        Anda boleh memilih pakej spa yang diinginkan di bahagian senarai pakej, klik butang "Pilih Pakej Ini", isi maklumat pada borang dan klik butang hantar. Sistem kami akan menjana mesej WhatsApp secara automatik kepada pihak spa.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-sky-100 rounded-2xl overflow-hidden bg-white shadow-sm">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-semibold text-slate-800 hover:text-spa-600 transition">
+                        <span>Adakah perlu membuat tempahan awal (booking)?</span>
+                        <i class="fa-solid fa-chevron-down text-spa-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-sky-50 pt-4">
+                        Ya, amat disarankan untuk membuat tempahan sekurang-kurangnya 1 hingga 2 hari lebih awal bagi memastikan slot masa pilihan anda masih kosong kerana slot harian adalah terhad.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-sky-100 rounded-2xl overflow-hidden bg-white shadow-sm">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-semibold text-slate-800 hover:text-spa-600 transition">
+                        <span>Adakah spa ini terbuka kepada lelaki?</span>
+                        <i class="fa-solid fa-chevron-down text-spa-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-sky-50 pt-4">
+                        Tidak. Rumah Spa Biru adalah spa eksklusif khusus untuk wanita dan muslimah sahaja demi menjaga privasi dan keselesaan para pelanggan.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="border border-sky-100 rounded-2xl overflow-hidden bg-white shadow-sm">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-semibold text-slate-800 hover:text-spa-600 transition">
+                        <span>Bagaimana jika saya ingin menukar tarikh tempahan?</span>
+                        <i class="fa-solid fa-chevron-down text-spa-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-sky-50 pt-4">
+                        Anda boleh memaklumkan kepada pihak kami melalui WhatsApp sekiranya ingin menukar tarikh atau masa rawatan sekurang-kurangnya 24 jam sebelum waktu temujanji.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: LOKASI & HUBUNGI KAMI -->
+    <section id="lokasi" class="py-20 bg-sky-50/50 border-t border-sky-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-spa-600 font-semibold text-sm tracking-wider uppercase bg-sky-100 px-3 py-1 rounded-full">Hubungi Kami</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Lokasi & Waktu Operasi</h2>
+                <p class="text-slate-600 text-base">Kunjungi kami di Klang atau hubungi talian khidmat pelanggan kami.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Info Card -->
+                <div class="lg:col-span-5 bg-white p-8 rounded-3xl border border-sky-100 shadow-sm space-y-6">
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-slate-900 mb-2">Rumah Spa Biru</h3>
+                        <p class="text-sm text-slate-600">Spa Muslimah Eksklusif di Klang, Selangor.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-spa-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800 text-sm">Lokasi</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">NO A1, LOT 2210, Kampung Delek Kanan, 41250 Klang, Selangor</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-spa-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800 text-sm">WhatsApp / Telefon</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">+60 12-345 6789</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-spa-600 flex items-center justify-center shrink-0">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800 text-sm">Waktu Operasi</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">Isnin - Ahad: 10.00 Pagi - 8.00 Malam<br>(Khamis Tutup / Cuti Rehat)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="#pakej" class="w-full bg-spa-600 hover:bg-spa-700 text-white font-semibold py-3.5 rounded-xl shadow transition text-sm flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>HUBUNGI KAMI SEKARANG</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed Placeholder -->
+                <div class="lg:col-span-7 h-[400px] rounded-3xl overflow-hidden shadow-lg border-4 border-white">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127471.2163450284!2d101.385565!3d3.043588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdc53181829e19%3A0x86da52ff8816c4c5!2sKlang%2C%20Selangor!5e0!3m2!1sen!2smy!4v1650000000000!5m2!1sen!2smy" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: BORANG TEMPAHAN UTAMA -->
+    <section id="tempahan" class="py-20 bg-white border-t border-sky-100">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-spa-50 p-8 sm:p-12 rounded-3xl border border-sky-100 shadow-xl space-y-8">
+                <div class="text-center space-y-3">
+                    <span class="text-spa-600 font-semibold text-sm tracking-wider uppercase bg-white px-3 py-1 rounded-full shadow-sm">Tempahan Pantas</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900">Borang Tempahan Slot Spa</h2>
+                    <p class="text-slate-600 text-sm">Isi butiran di bawah untuk menghantar permohonan tempahan slot melalui WhatsApp.</p>
+                </div>
+
+                <form id="main-booking-form" class="space-y-6" onsubmit="submitMainForm(event)">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-xs font-semibold text-slate-700 uppercase">Nama Penuh *</label>
+                            <input type="text" id="main-name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-spa-500 focus:outline-none bg-white text-sm" placeholder="cth: Siti Aminah">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-xs font-semibold text-slate-700 uppercase">Nombor Telefon / WhatsApp *</label>
+                            <input type="tel" id="main-phone" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-spa-500 focus:outline-none bg-white text-sm" placeholder="cth: 0123456789">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-xs font-semibold text-slate-700 uppercase">Pakej Spa Dipilih *</label>
+                            <select id="main-package" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-spa-500 focus:outline-none bg-white text-sm">
+                                <option value="">Sila Pilih Pakej</option>
+                                <option value="Pakej Relaxing Spa (RM 130)">Pakej Relaxing Spa (RM 130)</option>
+                                <option value="Pakej Body Treatment (RM 160)">Pakej Body Treatment (RM 160)</option>
+                                <option value="Pakej Facial Care (RM 95)">Pakej Facial Care (RM 95)</option>
+                                <option value="Pakej Full Body Pampering (RM 250)">Pakej Full Body Pampering (RM 250)</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-xs font-semibold text-slate-700 uppercase">Bilangan Pelanggan *</label>
+                            <select id="main-pax" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-spa-500 focus:outline-none bg-white text-sm">
+                                <option value="1 Orang">1 Orang</option>
+                                <option value="2 Orang">2 Orang (Bersama Kawan/Keluarga)</option>
+                                <option value="3 Orang atau Lebih">3 Orang atau Lebih</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-xs font-semibold text-slate-700 uppercase">Tarikh Pilihan *</label>
+                            <input type="date" id="main-date" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-spa-500 focus:outline-none bg-white text-sm">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-xs font-semibold text-slate-700 uppercase">Masa Pilihan *</label>
+                            <select id="main-time" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-spa-500 focus:outline-none bg-white text-sm">
+                                <option value="">Sila Pilih Masa</option>
+                                <option value="10:00 Pagi">10:00 Pagi</option>
+                                <option value="12:00 Tengah Hari">12:00 Tengah Hari</option>
+                                <option value="2:30 Petang">2:30 Petang</option>
+                                <option value="5:00 Petang">5:00 Petang</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="block text-xs font-semibold text-slate-700 uppercase">Catatan Tambahan (Jika Ada)</label>
+                        <textarea id="main-notes" rows="3" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-spa-500 focus:outline-none bg-white text-sm" placeholder="cth: Alahan produk, permintaan khas..."></textarea>
+                    </div>
+
+                    <div class="flex items-center space-x-3 pt-2">
+                        <input type="checkbox" id="main-consent" required class="w-4 h-4 text-spa-600 rounded border-slate-300 focus:ring-spa-500">
+                        <label for="main-consent" class="text-xs text-slate-600">Saya bersetuju dihubungi oleh pihak Rumah Spa Biru melalui WhatsApp.</label>
+                    </div>
+
+                    <button type="submit" class="w-full bg-spa-600 hover:bg-spa-700 text-white font-semibold py-4 rounded-xl shadow-lg transition text-base flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>HANTAR TEMPAHAN MELALUI WHATSAPP</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-full bg-spa-600 flex items-center justify-center text-white">
+                            <i class="fa-solid fa-spa text-sm"></i>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-white tracking-wide">Rumah Spa Biru</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Spa muslimah eksklusif di Klang, Selangor. Menyediakan rawatan penjagaan diri wanita berkualiti dalam suasana tenang dan penuh privasi.
+                    </p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-semibold text-white text-sm uppercase tracking-wider mb-3">Pautan Pantas</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#tentang" class="hover:text-white transition">Tentang Kami</a></li>
+                        <li><a href="#pakej" class="hover:text-white transition">Pakej Spa</a></li>
+                        <li><a href="#galeri" class="hover:text-white transition">Galeri Spa</a></li>
+                        <li><a href="#faq" class="hover:text-white transition">Soalan Lazim (FAQ)</a></li>
+                        <li><a href="#lokasi" class="hover:text-white transition">Lokasi & Hubungi</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-semibold text-white text-sm uppercase tracking-wider mb-3">Waktu Operasi</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Isnin - Ahad: 10:00 Pagi - 8:00 Malam<br>
+                        Khamis: Cuti Rehat<br>
+                        Klang, Selangor Darul Ehsan
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+                &copy; 2026 Rumah Spa Biru. Hak Cipta Terpelihara. Spa Muslimah Klang.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING ELEMENTS -->
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/60123456789?text=Hai%20Rumah%20Spa%20Biru,%20saya%20berminat%20ingin%20bertanya%20mengenai%20pakej%20spa." target="_blank" class="fixed bottom-6 right-6 z-30 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl transition duration-300 animate-pulse-slow">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Mobile Bottom Sticky CTA Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-white border-t border-sky-100 p-3 shadow-2xl flex items-center justify-between gap-3">
+        <a href="#pakej" class="flex-1 bg-spa-600 text-white text-center py-3 rounded-xl font-semibold text-xs shadow flex items-center justify-center space-x-2">
+            <i class="fa-solid fa-spa"></i>
+            <span>PILIH PAKEJ</span>
+        </a>
+        <a href="https://wa.me/60123456789?text=Hai%20Rumah%20Spa%20Biru,%20saya%20ingin%20membuat%20tempahan." target="_blank" class="flex-1 bg-emerald-500 text-white text-center py-3 rounded-xl font-semibold text-xs shadow flex items-center justify-center space-x-2">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>WHATSAPP</span>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="scrollToTop()" class="fixed bottom-24 right-6 z-20 bg-slate-800 text-white w-10 h-10 rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 flex items-center justify-center hover:bg-spa-600">
+        <i class="fa-solid fa-arrow-up text-xs"></i>
+    </button>
+
+
+    <!-- POPUP MODAL BORANG TEMPAHAN -->
+    <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6 sm:p-8 relative transform scale-95 transition-transform duration-300" id="modal-container">
+            <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+
+            <div class="space-y-6">
+                <div>
+                    <span class="text-xs font-semibold text-spa-600 uppercase tracking-wider bg-sky-100 px-3 py-1 rounded-full">Tempahan Pakej</span>
+                    <h3 class="font-serif text-2xl font-bold text-slate-900 mt-2">Borang Tempahan Spa</h3>
+                    <p class="text-xs text-slate-500 mt-1">Sila lengkapkan maklumat di bawah untuk hantar temujanji ke WhatsApp kami.</p>
+                </div>
+
+                <div class="bg-sky-50 p-4 rounded-2xl border border-sky-100 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-slate-500 block">Pakej Dipilih:</span>
+                        <span id="modal-package-name" class="font-bold text-slate-800 text-sm">Pakej Relaxing Spa</span>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs text-slate-500 block">Anggaran Harga:</span>
+                        <span class="font-bold text-spa-700 text-base">RM <span id="modal-package-price">130</span> <span class="text-xs font-normal text-slate-500">(Demo)</span></span>
+                    </div>
+                </div>
+
+                <form id="modal-booking-form" class="space-y-4" onsubmit="submitModalForm(event)">
+                    <div class="space-y-1">
+                        <label class="block text-xs font-semibold text-slate-700 uppercase">Nama Penuh *</label>
+                        <input type="text" id="modal-name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-spa-500 focus:outline-none bg-white text-sm" placeholder="cth: Siti Aminah">
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="block text-xs font-semibold text-slate-700 uppercase">Nombor Telefon / WhatsApp *</label>
+                        <input type="tel" id="modal-phone" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-spa-500 focus:outline-none bg-white text-sm" placeholder="cth: 0123456789">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label class="block text-xs font-semibold text-slate-700 uppercase">Tarikh Pilihan *</label>
+                            <input type="date" id="modal-date" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-spa-500 focus:outline-none bg-white text-sm">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="block text-xs font-semibold text-slate-700 uppercase">Masa Pilihan *</label>
+                            <select id="modal-time" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-spa-500 focus:outline-none bg-white text-sm">
+                                <option value="">Pilih Masa</option>
+                                <option value="10:00 Pagi">10:00 Pagi</option>
+                                <option value="12:00 Tengah Hari">12:00 Tengah Hari</option>
+                                <option value="2:30 Petang">2:30 Petang</option>
+                                <option value="5:00 Petang">5:00 Petang</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label class="block text-xs font-semibold text-slate-700 uppercase">Bilangan Pelanggan *</label>
+                            <select id="modal-pax" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-spa-500 focus:outline-none bg-white text-sm">
+                                <option value="1 Orang">1 Orang</option>
+                                <option value="2 Orang">2 Orang</option>
+                                <option value="3 Orang">3 Orang+</option>
+                            </select>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="block text-xs font-semibold text-slate-700 uppercase">Servis Tambahan</label>
+                            <select id="modal-addon" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-spa-500 focus:outline-none bg-white text-sm">
+                                <option value="Tiada">Tiada</option>
+                                <option value="Hot Stone (RM30)">Hot Stone (RM30)</option>
+                                <option value="Foot Mask (RM20)">Foot Mask (RM20)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="block text-xs font-semibold text-slate-700 uppercase">Catatan Tambahan</label>
+                        <textarea id="modal-notes" rows="2" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-spa-500 focus:outline-none bg-white text-sm" placeholder="Catatan khas (jika ada)..."></textarea>
+                    </div>
+
+                    <div class="flex items-center space-x-3 pt-1">
+                        <input type="checkbox" id="modal-consent" required class="w-4 h-4 text-spa-600 rounded border-slate-300 focus:ring-spa-500">
+                        <label for="modal-consent" class="text-xs text-slate-600">Saya bersetuju dihubungi oleh pihak spa.</label>
+                    </div>
+
+                    <button type="submit" class="w-full bg-spa-600 hover:bg-spa-700 text-white font-semibold py-3.5 rounded-xl shadow transition text-sm flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>HANTAR TEMPAHAN MELALUI WHATSAPP</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden opacity-0 transition-opacity duration-300" onclick="closeLightbox()">
+        <div class="relative max-w-4xl w-full flex items-center justify-center" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-spa-200 text-2xl font-bold p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="lightbox-img" src="" alt="Lightbox Zoom" class="max-h-[85vh] max-w-full rounded-2xl shadow-2xl border-4 border-white object-contain">
+        </div>
+    </div>
+
+
+    <!-- CUSTOM TOAST / NOTIFICATION -->
+    <div id="custom-toast" class="fixed top-28 right-4 sm:right-6 z-[100] bg-slate-900/95 text-white px-5 py-3.5 rounded-2xl shadow-2xl transform -translate-y-4 opacity-0 pointer-events-none transition-all duration-300 flex items-center space-x-3 text-sm backdrop-blur-sm border border-slate-700">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-lg shrink-0"></i>
+        <span id="toast-message" class="font-medium">Mesej berjaya dijana! Membuka WhatsApp...</span>
+    </div>
+
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- Sticky Header & Back to Top ---
+        const navbar = document.getElementById('navbar');
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md', 'py-2');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.remove('shadow-md', 'py-2');
+            }
+
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                backToTopBtn.classList.add('opacity-100');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                backToTopBtn.classList.remove('opacity-100');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // --- FAQ Accordion ---
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                // Close others
+                faqToggles.forEach(otherBtn => {
+                    if (otherBtn !== btn) {
+                        otherBtn.nextElementSibling.classList.add('hidden');
+                        otherBtn.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // --- Toast Notification ---
+        let toastTimeout;
+        function showToast(msg) {
+            const toast = document.getElementById('custom-toast');
+            document.getElementById('toast-message').innerText = msg;
+            
+            // Clear any existing timeout
+            if (toastTimeout) clearTimeout(toastTimeout);
+
+            // Show toast smoothly
+            toast.classList.remove('-translate-y-4', 'opacity-0', 'pointer-events-none');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            // Hide toast automatically after 3.5 seconds
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('-translate-y-4', 'opacity-0', 'pointer-events-none');
+            }, 3500);
+        }
+
+        // --- Booking Modal State & Functions ---
+        let selectedPackageName = "";
+        let selectedPackagePrice = "";
+
+        function openBookingModal(packageName, price) {
+            selectedPackageName = packageName;
+            selectedPackagePrice = price;
+
+            document.getElementById('modal-package-name').innerText = packageName;
+            document.getElementById('modal-package-price').innerText = price;
+
+            // Set min date for date pickers to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('modal-date').min = today;
+            document.getElementById('main-date').min = today;
+
+            const modal = document.getElementById('booking-modal');
+            const container = document.getElementById('modal-container');
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Disable background scroll
+
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                container.classList.remove('scale-95');
+                container.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeBookingModal() {
+            const modal = document.getElementById('booking-modal');
+            const container = document.getElementById('modal-container');
+
+            modal.classList.add('opacity-0');
+            container.classList.remove('scale-100');
+            container.classList.add('scale-95');
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto'; // Enable background scroll
+            }, 300);
+        }
+
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeBookingModal();
+                closeLightbox();
+            }
+        });
+
+        // --- Modal Form Submission to WhatsApp ---
+        function submitModalForm(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('modal-name').value.trim();
+            const phone = document.getElementById('modal-phone').value.trim();
+            const date = document.getElementById('modal-date').value;
+            const time = document.getElementById('modal-time').value;
+            const pax = document.getElementById('modal-pax').value;
+            const addon = document.getElementById('modal-addon').value;
+            const notes = document.getElementById('modal-notes').value.trim();
+
+            if (!name || !phone || !date || !time) {
+                showToast("Sila lengkapkan ruangan wajib!");
+                return;
+            }
+
+            const message = `Hai Rumah Spa Biru, saya ingin membuat tempahan slot spa.%0A%0A*Maklumat Pelanggan:*%0A- Nama: ${encodeURIComponent(name)}%0A- No Telefon: ${encodeURIComponent(phone)}%0A- Pakej: ${encodeURIComponent(selectedPackageName)} (Anggaran RM ${selectedPackagePrice})%0A- Tarikh: ${encodeURIComponent(date)}%0A- Masa: ${encodeURIComponent(time)}%0A- Bilangan: ${encodeURIComponent(pax)}%0A- Servis Tambahan: ${encodeURIComponent(addon)}%0A- Catatan: ${encodeURIComponent(notes || 'Tiada')}%0A%0Mohon pengesahan slot. Terima kasih!`;
+
+            showToast("Mesej WhatsApp berjaya dijana!");
+            setTimeout(() => {
+                window.open(`https://wa.me/${SPA_WHATSAPP_NUMBER}?text=${message}`, '_blank');
+                closeBookingModal();
+            }, 1000);
+        }
+
+        // --- Main Bottom Form Submission to WhatsApp ---
+        function submitMainForm(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('main-name').value.trim();
+            const phone = document.getElementById('main-phone').value.trim();
+            const pkg = document.getElementById('main-package').value;
+            const pax = document.getElementById('main-pax').value;
+            const date = document.getElementById('main-date').value;
+            const time = document.getElementById('main-time').value;
+            const notes = document.getElementById('main-notes').value.trim();
+
+            if (!name || !phone || !pkg || !date || !time) {
+                showToast("Sila lengkapkan semua ruangan wajib!");
+                return;
+            }
+
+            const message = `Hai Rumah Spa Biru, saya ingin membuat tempahan melalui borang utama web.%0A%0A*Maklumat Pelanggan:*%0A- Nama: ${encodeURIComponent(name)}%0A- No Telefon: ${encodeURIComponent(phone)}%0A- Pakej Dipilih: ${encodeURIComponent(pkg)}%0A- Bilangan: ${encodeURIComponent(pax)}%0A- Tarikh: ${encodeURIComponent(date)}%0A- Masa: ${encodeURIComponent(time)}%0A- Catatan: ${encodeURIComponent(notes || 'Tiada')}%0A%0Mohon pengesahan slot. Terima kasih!`;
+
+            showToast("Mesej WhatsApp berjaya dijana!");
+            setTimeout(() => {
+                window.open(`https://wa.me/${SPA_WHATSAPP_NUMBER}?text=${message}`, '_blank');
+            }, 1000);
+        }
+
+        // --- Lightbox Functions ---
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const lightbox = document.getElementById('lightbox-modal');
+            const lightboxImg = document.getElementById('lightbox-img');
+
+            lightboxImg.src = img.src;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+            }, 10);
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox-modal');
+            lightbox.classList.add('opacity-0');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
+    </script>
+</body>
+</html>
